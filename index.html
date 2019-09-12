@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        ::selection {
+            background: hotpink;
+            color: white;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        body>* {
+            padding: 16px;
+        }
+
+        header {
+            background: lightblue;
+            color: #000;
+        }
+
+        @media all and (min-width:570px) {
+            header ol {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        section>h1:before {
+            content: "💩 "
+        }
+      /*pseudo*/
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Using Google Sheets as a database</h1>
+        <h2>Steps we should look at</h2>
+        <ol>
+            <li>Fancy CSS</li>
+            <li>a11y</li>
+            <li>Git</li>
+            <li>sorting</li>
+            <li>GitHub pages</li>
+        </ol>
+    </header>
+    <section></section>
+    <template>
+        <h1>HERE GOES</h1>
+    </template>
+    <script src="index.js"></script>
+</body>
+
+</html>
