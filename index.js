@@ -3,10 +3,25 @@ const endpoint = `https://spreadsheets.google.com/feeds/list/${spreadsheetID}/od
 
 fetch(endpoint).then(res=>res.json()).then(showStuff);
 
-function showStuff(data){
-  const myArray = data.feed.entry;
 
+function sortByStyle(a,b){
+  console.log(a,b)
+  if (a.gsx$style.$t > b.gsx$style.$t) {
+    return -1;
+  }
+  if (a.gsx$style.$t < b.gsx$style.$t) {
+    return 1;
+  }
+  // a must be equal to b
+  return 0;
+}
+function showStuff(data){
+  //
+  const myArray = data.feed.entry;
+  //sort here
+  myArray.sort(sortByStyle)
   myArray.forEach(showBeer)
+  //
 }
 
 function showBeer(beerData){
